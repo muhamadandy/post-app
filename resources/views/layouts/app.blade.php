@@ -22,14 +22,8 @@
           <!-- Login, Register, dan Profile -->
           <div class="space-x-4 flex items-center">
             @auth
-            <a href="{{route("beranda")}}" class="text-white p-3">{{auth()->user()->username}}</a>
+            <a href="{{route("akun")}}" class="text-white p-3">Akun</a>
             <a href="{{route("logout")}}" class="text-white p-3">Logout</a>
-            <form action="{{route("destroy.user",auth()->user())}}" method="post">
-                @csrf
-                @method("DELETE")
-                <button type="submit" class="bg-red-500 hover:bg-red-600 text-white rounded p-2">Hapus Akun</button>
-            </form>
-
             @endauth
           </div>
         </div>
